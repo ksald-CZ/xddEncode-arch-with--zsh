@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include "extensions.h"
 
 int main(int argc, char* argv[]) {
     char * newname[50];
     strcpy(newname, argv[1]);
-    strcat(newname,".xdd");
-    rename(argv[1], newname);
+    remove_extension(newname);
+    printf("%s",newname);
     return 0;
 }
