@@ -3,3 +3,5 @@
 `chmod u+x setup.sh` \
 `./setup.sh` \
 restart terminal
+
+Debian distributions ONLY
