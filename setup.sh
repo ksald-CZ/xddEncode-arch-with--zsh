@@ -3,15 +3,15 @@
 if [[ $(command -v pacman) ]]; then
   echo "Detected pacman package manager"
   sudo pacman -Syu
-  sudo pacman -S lz4
+  sudo pacman -S lz4 tar
 elif [[ $(command -v apt-get) ]]; then
   echo "Detected apt package manager"
   sudo apt-get update
-  sudo apt-get install lz4
+  sudo apt-get install lz4 tar
 elif [[ $(command -v dnf) ]]; then
   echo "Detected dnf package manager"
   sudo dnf update
-  sudo dnf install lz4
+  sudo dnf install lz4 tar
 else
   echo "Unsupported package manager"
   exit 1
