@@ -3,15 +3,15 @@
 if [[ $(command -v pacman) ]]; then
   echo "Detected pacman package manager"
   sudo pacman -Syu
-  sudo pacman -S lz4 tar
+  sudo pacman -S lz4 tar wget
 elif [[ $(command -v apt-get) ]]; then
   echo "Detected apt package manager"
   sudo apt-get update
-  sudo apt-get install lz4 tar
+  sudo apt-get install lz4 tar wget
 elif [[ $(command -v dnf) ]]; then
   echo "Detected dnf package manager"
   sudo dnf update
-  sudo dnf install lz4 tar
+  sudo dnf install lz4 tar wget
 else
   echo "Unsupported package manager"
   exit 1
@@ -42,3 +42,4 @@ chmod u+x ~/.xdd/decode.sh
 chmod u+x ~/.xdd/encode.sh
 
 source $SHELL_CONFIG_FILE
+. $SHELL_CONFIG_FILE
