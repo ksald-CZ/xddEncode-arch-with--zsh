@@ -1,31 +1,31 @@
 #!/bin/bash
 
 if [[ $(command -v pacman) ]]; then
-  echo "Detected pacman package manager"
+  echo "Detected pacman package manager :3"
   sudo pacman -Syu
   sudo pacman -S lz4 tar wget
 elif [[ $(command -v apt-get) ]]; then
-  echo "Detected apt package manager"
+  echo "Detected apt package manager :3"
   sudo apt-get update
   sudo apt-get install lz4 tar wget
 elif [[ $(command -v dnf) ]]; then
-  echo "Detected dnf package manager"
+  echo "Detected dnf package manager :3"
   sudo dnf update
   sudo dnf install lz4 tar wget
 else
-  echo "Unsupported package manager"
+  echo "Unsupported package manager :3"
   exit 1
 fi
 
 SHELL_CONFIG_FILE=
 if [[ $(command -v zsh) ]]; then
-  echo "Detected zsh shell"
+  echo "Detected zsh shell :3"
   SHELL_CONFIG_FILE=~/.zshrc
 elif [[ $(command -v bash) ]]; then
-  echo "Detected bash shell"
+  echo "Detected bash shell :3"
   SHELL_CONFIG_FILE=~/.bashrc
 else
-  echo "Unsupported shell"
+  echo "Unsupported shell :3"
   exit 1
 fi
 
