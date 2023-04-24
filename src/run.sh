@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SHELL_CONFIG_FILE=
 if [[ $(command -v zsh) ]]; then
