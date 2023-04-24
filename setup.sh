@@ -40,3 +40,5 @@ chmod u+x ~/.xdd/run.sh
 chmod u+x ~/.xdd/a.out
 chmod u+x ~/.xdd/decode.sh
 chmod u+x ~/.xdd/encode.sh
+
+. $SHELL_CONFIG_FILE
