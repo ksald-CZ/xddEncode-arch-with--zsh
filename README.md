@@ -1,7 +1,5 @@
 # xddEncode
-`wget https://raw.githubusercontent.com/MartinRostejnsky/xddCompress/main/setup.sh` \
-`chmod u+x setup.sh` \
-`./setup.sh` \
+`curl -sSL https://raw.githubusercontent.com/MartinRostejnsky/xddEncode/main/setup.sh | bash` \
 restart terminal
 
 Debian distributions ONLY!
