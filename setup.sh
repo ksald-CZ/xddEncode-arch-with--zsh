@@ -7,11 +7,11 @@ if [[ $(command -v pacman) ]]; then
 elif [[ $(command -v apt-get) ]]; then
   echo "Detected apt package manager"
   sudo apt-get update
-  sudo apt-get install lz4
+  sudo apt-get install lz4 -y
 elif [[ $(command -v dnf) ]]; then
   echo "Detected dnf package manager"
   sudo dnf update
-  sudo dnf install lz4
+  sudo dnf install lz4 -y
 else
   echo "Unsupported package manager"
   exit 1
@@ -40,3 +40,4 @@ chmod u+x ~/.xdd/run.sh
 chmod u+x ~/.xdd/a.out
 chmod u+x ~/.xdd/decode.sh
 chmod u+x ~/.xdd/encode.sh
+
