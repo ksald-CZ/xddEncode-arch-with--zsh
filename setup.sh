@@ -7,11 +7,11 @@ if [[ $(command -v pacman) ]]; then
 elif [[ $(command -v apt-get) ]]; then
   echo "Detected apt package manager :3"
   sudo apt-get update
-  sudo apt-get install lz4 tar wget
+  sudo apt-get install lz4 tar wget -y
 elif [[ $(command -v dnf) ]]; then
   echo "Detected dnf package manager :3"
   sudo dnf update
-  sudo dnf install lz4 tar wget
+  sudo dnf install lz4 tar wget -y
 else
   echo "Unsupported package manager :3"
   exit 1
