@@ -1,4 +1,4 @@
 #!/bin/sh
 ~/.xdd/xddEncode $1 $1.dec decrypt
-lz4 -d $1.dec | tar -xvf -
+tar --zstd -xvf $1.dec
 rm $1.dec

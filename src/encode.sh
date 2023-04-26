@@ -1,5 +1,5 @@
 #!/bin/sh
 name=$(~/.xdd/xddEncode $1)
-tar -cvf - $1 | lz4 -9 > $name.tar.xdd
-~/.xdd/xddEncode $name.tar.xdd $name.xdd encrypt
-rm $name.tar.xdd
+tar --zstd -cvf $name.xdd.v $1
+~/.xdd/xddEncode $name.xdd.v $name.xdd encrypt
+rm $name.xdd.v
