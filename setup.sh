@@ -3,15 +3,15 @@
 if [[ $(command -v pacman) ]]; then
   echo "Detected pacman package manager :3"
   sudo pacman -Syu
-  sudo pacman -S lz4 tar wget
+  sudo pacman -S lz4 tar wget zstd -y
 elif [[ $(command -v apt-get) ]]; then
   echo "Detected apt package manager :3"
   sudo apt-get update
-  sudo apt-get install lz4 tar wget -y
+  sudo apt-get install lz4 tar wget zstd -y
 elif [[ $(command -v dnf) ]]; then
   echo "Detected dnf package manager :3"
   sudo dnf update
-  sudo dnf install lz4 tar wget -y
+  sudo dnf install lz4 tar wget zstd -y
 else
   echo "Unsupported package manager :3"
   exit 1
@@ -33,11 +33,11 @@ echo "alias xdd=~/.xdd/run.sh" >> $SHELL_CONFIG_FILE
 
 mkdir -p ~/.xdd
 wget -P ~/.xdd https://raw.githubusercontent.com/MartinRostejnsky/xddCompress/main/src/run.sh
-wget -P ~/.xdd https://github.com/MartinRostejnsky/xddCompress/raw/main/src/a.out
+wget -P ~/.xdd https://github.com/MartinRostejnsky/xddCompress/raw/main/src/xddEncode
 wget -P ~/.xdd https://raw.githubusercontent.com/MartinRostejnsky/xddCompress/main/src/decode.sh
 wget -P ~/.xdd https://raw.githubusercontent.com/MartinRostejnsky/xddCompress/main/src/encode.sh
 chmod u+x ~/.xdd/run.sh
-chmod u+x ~/.xdd/a.out
+chmod u+x ~/.xdd/xddEncode
 chmod u+x ~/.xdd/decode.sh
 chmod u+x ~/.xdd/encode.sh
 
