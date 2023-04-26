@@ -1,3 +1,5 @@
+
+
 # xddEncode
 To install xddEncode, run the following command:\
 `curl -sSL https://raw.githubusercontent.com/MartinRostejnsky/xddEncode/main/setup.sh | bash`
