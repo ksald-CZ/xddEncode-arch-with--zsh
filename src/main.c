@@ -11,7 +11,7 @@ int Encrypt(char * FILENAME, char * NEW_FILENAME)
     outFile = fopen(NEW_FILENAME, "wb");
 
     while ((byte = fgetc(inFile)) != EOF) {
-        byte += 50;  // shift the byte by 50
+        byte = (byte + 50) % 255;  // shift the byte by 50
         fputc(byte, outFile);  // write the byte to the output file
     }
 
@@ -31,6 +31,9 @@ int Decrypt (char *FILENAME, char *NEW_FILENAME)
 
     while ((byte = fgetc(inFile)) != EOF) {
         byte -= 50;  // shift the byte by 50
+        if (byte < 0) {
+            byte += 255;
+        }
         fputc(byte, outFile);  // write the byte to the output file
     }
 
