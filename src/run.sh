@@ -16,10 +16,10 @@ if [ $# -eq 0 ]
 then
   rm -rf ~/.xdd
   sed '/alias xdd/d' -i $SHELL_CONFIG_FILE
-elif [ $1 = "encode" ]
+elif [ $1 = "-e" ]
 then
   ~/.xdd/encode.sh $2
-elif [ $1 = "decode" ]
+elif [ $1 = "-d" ]
 then
   ~/.xdd/decode.sh $2
 else
