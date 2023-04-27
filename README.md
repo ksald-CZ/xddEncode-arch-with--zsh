@@ -1,5 +1,5 @@
-# xddEncode \
-### Installation
+# xddEncode 
+## Installation
 To install xddEncode, run the following command:\
 `curl -sSL https://raw.githubusercontent.com/MartinRostejnsky/xddEncode/main/setup.sh | bash`
 
@@ -9,17 +9,17 @@ To install xddEncode, run the following command:\
 
 Works with Debian, Arch and Red Hat based distributions with bash or zsh shell.
 
-### Usage \
+## Usage
 
 `xdd <action> <file>`
 
 ##### Actions
 
-- Decode `e`  
+- Decode `-d`  
 
 - Encode `-e`  
 
-### Removal \
+## Removal
 
 Uninstall by using \
 `xdd`\
