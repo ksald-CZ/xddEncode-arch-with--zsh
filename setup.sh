@@ -42,4 +42,4 @@ chmod u+x ~/.xdd/decode.sh
 chmod u+x ~/.xdd/encode.sh
 
 source $SHELL_CONFIG_FILE
-. $SHELL_CONFIG_FILE
+
